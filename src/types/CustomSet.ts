@@ -10,10 +10,9 @@ export class CustomSet extends Set {
         moves: Array<string>,
         nature: string,
         item: string,
-        rank: number,
         ivs: Array<number>
     ) {
-        super(name, species, evs, moves, nature, item, rank)
+        super(name, species, evs, moves, nature, item)
         this.ivs = ivs
     }
 }

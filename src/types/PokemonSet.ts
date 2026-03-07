@@ -2,6 +2,7 @@ import { Set } from "./Set"
 
 export class PokemonSet extends Set {
     generation: number
+    rank: number
 
     constructor(
         name: string,
@@ -10,10 +11,11 @@ export class PokemonSet extends Set {
         moves: Array<string>,
         nature: string,
         item: string,
-        rank: number,
-        generation: number
+        generation: number,
+        rank: number
     ) {
-        super(name, species, evs, moves, nature, item, rank)
+        super(name, species, evs, moves, nature, item)
         this.generation = generation
+        this.rank = rank
     }    
 }

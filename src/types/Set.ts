@@ -5,7 +5,6 @@ export abstract class Set {
     moves: Array<string>
     nature: string
     item: string
-    rank: number
 
     constructor(
         name: string,
@@ -14,7 +13,6 @@ export abstract class Set {
         moves: Array<string>,
         nature: string,
         item: string,
-        rank: number
 
     ) {
         this.name = name
@@ -23,6 +21,5 @@ export abstract class Set {
         this.moves = moves
         this.nature = nature
         this.item = item
-        this.rank = rank
     }
 }
