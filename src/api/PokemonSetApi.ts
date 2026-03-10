@@ -7,12 +7,13 @@ export async function searchPokemonSets(
     page: number
 ): Promise<Page<PokemonSet>> {
 
+    const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL
     const searchParameters = {
         rank: rank,
         species: species,
     }
 
-    const response = await fetch(`http://localhost:8080/pokemon-set/search?page=${page}`, {
+    const response = await fetch(`${VITE_API_BASE_URL}/pokemon-set/search?page=${page}&pageSize=20`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
