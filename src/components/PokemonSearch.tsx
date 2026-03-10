@@ -1,20 +1,16 @@
 import { useState } from "react"
-import { getPokemonSet } from "../api/ApiConnector"
-import { PokemonSet } from "../types/PokemonSet"
-import type { Page } from "../types/Page"
 
 interface Props {
-  onResult: (data: Page<PokemonSet>) => void
+  onSearch: (species: string, rank: number) => void
 }
 
-export default function PokemonSearch({ onResult }: Props) {
+export default function PokemonSearch({ onSearch }: Props) {
 
   const [species, setSpecies] = useState("")
   const [rank, setRank] = useState("")
 
-  const handleSearch = async () => {
-    const result = await getPokemonSet(species, Number(rank))
-    onResult(result)
+  const handleSearch = () => {
+    onSearch(species, Number(rank))
   }
 
   return (
