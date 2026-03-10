@@ -1,17 +1,18 @@
 import type { Page } from "../types/Page";
 import { PokemonSet } from "../types/PokemonSet"
 
-export async function getPokemonSet(
+export async function searchPokemonSets(
     species: string,
-    rank: number
+    rank: number,
+    page: number
 ): Promise<Page<PokemonSet>> {
 
     const searchParameters = {
         rank: rank,
-        species: species
+        species: species,
     }
 
-    const response = await fetch(`http://localhost:8080/pokemon-set/search`, {
+    const response = await fetch(`http://localhost:8080/pokemon-set/search?page=${page}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
