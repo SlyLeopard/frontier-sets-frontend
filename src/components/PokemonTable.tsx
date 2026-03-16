@@ -1,0 +1,36 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@mui/material";
+import type { PokemonSet } from "../types/PokemonSet";
+
+interface Props {
+  sets: PokemonSet[]
+}
+
+export default function PokemonTable({ sets }: Props) {
+  return (
+    <Table>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Item</TableCell>
+          <TableCell>Nature</TableCell>
+        </TableRow>
+      </TableHead>
+
+      <TableBody>
+        {sets.map((pokemon) => (
+          <TableRow key={pokemon.name}>
+            <TableCell>{pokemon.name}</TableCell>
+            <TableCell>{pokemon.item}</TableCell>
+            <TableCell>{pokemon.nature}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  );
+}
