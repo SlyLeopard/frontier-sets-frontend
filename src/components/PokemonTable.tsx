@@ -17,6 +17,7 @@ export default function PokemonTable({ sets }: Props) {
       <TableHead>
         <TableRow>
           <TableCell>Name</TableCell>
+          <TableCell>Species</TableCell>
           <TableCell>Item</TableCell>
           <TableCell>Nature</TableCell>
         </TableRow>
@@ -26,6 +27,7 @@ export default function PokemonTable({ sets }: Props) {
         {sets.map((pokemon) => (
           <TableRow key={pokemon.name}>
             <TableCell>{pokemon.name}</TableCell>
+            <TableCell>{pokemon.species}</TableCell>
             <TableCell>{pokemon.item}</TableCell>
             <TableCell>{pokemon.nature}</TableCell>
           </TableRow>
