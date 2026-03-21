@@ -20,6 +20,7 @@ export default function PokemonTable({ sets }: Props) {
           <TableCell>Name</TableCell>
           <TableCell>Species</TableCell>
           <TableCell>Item</TableCell>
+          <TableCell>Nature</TableCell>
           <TableCell>HP</TableCell>
           <TableCell>Atk</TableCell>
           <TableCell>Def</TableCell>
