@@ -27,6 +27,10 @@ export default function PokemonTable({ sets }: Props) {
           <TableCell>SpA</TableCell>
           <TableCell>SpD</TableCell>
           <TableCell>SpE</TableCell>
+          <TableCell>Move 1</TableCell>
+          <TableCell>Move 2</TableCell>
+          <TableCell>Move 3</TableCell>
+          <TableCell>Move 4</TableCell>
         </TableRow>
       </TableHead>
 
@@ -44,6 +48,10 @@ export default function PokemonTable({ sets }: Props) {
             <TableCell>{set.pokemon.stats[3]}</TableCell>
             <TableCell>{set.pokemon.stats[4]}</TableCell>
             <TableCell>{set.pokemon.stats[5]}</TableCell>
+            <TableCell>{set.moves[0]}</TableCell>
+            <TableCell>{set.moves[1]}</TableCell>
+            <TableCell>{set.moves[2]}</TableCell>
+            <TableCell>{set.moves[3]}</TableCell>
           </TableRow>
         ))}
       </TableBody>
