@@ -1,10 +1,10 @@
 import { useState } from "react"
 import PokemonSearch from "../components/PokemonSearch"
-import PokemonSetList from "../components/PokemonSetList"
 import PaginationControls from "../components/PaginationControls"
 import type { Page } from "../types/Page"
 import { PokemonSet } from "../types/PokemonSet"
 import { searchPokemonSets } from "../api/PokemonSetApi"
+import PokemonTable from "../components/PokemonTable"
 
 export default function PokemonSetSearchPage() {
 
@@ -39,7 +39,7 @@ export default function PokemonSetSearchPage() {
 
       {pageData && (
         <>
-          <PokemonSetList sets={pageData.content} />
+          <PokemonTable sets={pageData.content} />
 
           <PaginationControls
             page={page}
