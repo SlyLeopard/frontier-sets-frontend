@@ -26,6 +26,5 @@ export async function searchPokemonSets(
         throw new Error("Failed to fetch PokemonSets")
     }
 
-    console.log('Response: ', response)
     return response.json()
 }
